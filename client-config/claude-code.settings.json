@@ -1,0 +1,21 @@
+{
+  "mcpServers": {
+    "second-brain": {
+      "type": "http",
+      "url": "https://<worker>.<subdomain>.workers.dev/mcp"
+    }
+  },
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "prompt",
+            "timeout": 20,
+            "prompt": "STOPPING CONDITION for the user's second brain: the assistant may stop because the last turn contains NO uncaptured durable knowledge.\n\nInput (JSON): $ARGUMENTS\n\nThe condition is SATISFIED (answer {\"ok\": true}) when ANY of these holds:\n- stop_hook_active is true;\n- cwd appears to be one of the second-brain vaults or a scratch directory;\n- last_assistant_message already reports a successful sb_capture;\n- last_assistant_message contains nothing that passes the six-month rule below.\n\nSix-month rule: durable = a reasoned DECISION, a lasting CONSTRAINT, a non-obvious domain FACT, a SOURCE worth finding again, a durable preference/configuration, or a user CORRECTION — something likely to be searched for months from now. NOT durable: debugging, commands, transient state, routine code edits, progress summaries or generic Q&A. When in doubt, it is NOT durable.\n\nThe condition is NOT satisfied (answer {\"ok\": false, \"reason\": \"Second brain: capture the durable item with sb_capture. Choose work for professional knowledge and personal for personal knowledge; trigger auto; follow check -> inspect -> update/new; use real sources only. Then report vault and title, and stop.\"}) ONLY when last_assistant_message itself states an uncaptured durable item.\n\nAnswer with the JSON object only. No prose."
+          }
+        ]
+      }
+    ]
+  }
+}

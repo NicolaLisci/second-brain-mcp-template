@@ -1,0 +1,2 @@
+[mcp_servers.second-brain]
+url = "https://<worker>.<subdomain>.workers.dev/mcp"

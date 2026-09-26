@@ -1,0 +1,17 @@
+GITHUB_CLIENT_ID=<github oauth app client id>
+GITHUB_CLIENT_SECRET=<github oauth app client secret>
+COOKIE_ENCRYPTION_KEY=<generate with openssl rand -hex 32>
+GITHUB_PAT=<fine-grained PAT with contents read/write on your vault repos>
+HMAC_SECRET=<generate with openssl rand -hex 32>
+ALLOWED_LOGIN=<your GitHub username>
+
+GITHUB_OWNER=<your GitHub username or organization>
+WORK_VAULT_REPO=<your work vault repository>
+PERSONAL_VAULT_REPO=<your personal vault repository>
+VAULT_BRANCH=main
+CAPTURE_TIMEZONE=UTC
+DENYLIST_TERMS=<optional private terms, comma separated>
+
+TELEGRAM_BOT_TOKEN=<optional: token from BotFather>
+TELEGRAM_WEBHOOK_SECRET=<optional: random webhook secret>
+TELEGRAM_ALLOWED_USER_ID=<optional: your numeric Telegram user id>

@@ -1,0 +1,9 @@
+Help me configure this computer to use my already deployed Second Brain MCP server.
+
+Read client-config/README.md first.
+
+Work one step at a time. Perform terminal and file checks yourself when possible. Before editing a configuration file, make a backup and merge settings instead of overwriting unrelated configuration.
+
+Never ask me to paste access tokens, OAuth secrets, Telegram tokens, encryption keys or other secrets into chat.
+
+Ask only for the MCP endpoint if it is not already available. Register the server, guide me through OAuth, then test sb_search, sb_get and sb_capture with harmless test knowledge. Confirm duplicate handling before declaring setup complete.

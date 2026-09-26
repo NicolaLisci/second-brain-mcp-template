@@ -1,0 +1,21 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "second-brain",
+  "main": "src/index.ts",
+  "compatibility_date": "2025-03-10",
+  "compatibility_flags": ["nodejs_compat"],
+  "migrations": [{ "new_sqlite_classes": ["SecondBrainMCP"], "tag": "v1" }],
+  "durable_objects": {
+    "bindings": [{ "class_name": "SecondBrainMCP", "name": "MCP_OBJECT" }]
+  },
+  "ai": { "binding": "AI" },
+  "kv_namespaces": [
+    {
+      "binding": "OAUTH_KV",
+      "id": "00000000000000000000000000000000"
+    }
+  ],
+  "rules": [{ "type": "Text", "globs": ["**/*.txt"], "fallthrough": true }],
+  "observability": { "enabled": true },
+  "dev": { "port": 8788 }
+}
