@@ -38,6 +38,14 @@ Telegram ────┘                       │
 
 The Worker is stateless. Vault content is read and written through the GitHub API; it is not cloned to persistent Worker storage.
 
+## Full setup: second brain + one configuration for every AI
+
+The [`agent-os/`](agent-os/README.md) folder adds the other half: vault seeds and a
+centralized agent configuration (`AGENT.md`, `Me.md`, `MEMORY.md`, second-brain skills,
+Claude Code/Codex hooks, a macOS installer). To install everything as a non-technical
+user on a Mac, open this repository with Claude Code and ask it to follow
+[`agent-os/INSTALLA.md`](agent-os/INSTALLA.md); it calls the server installer below as one phase.
+
 ## Start here
 
 If you are not a developer, do **not** start by reading the source code.
